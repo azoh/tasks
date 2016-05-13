@@ -1,0 +1,24 @@
+{% load app_age %}
+{% load app_bizzfuzz %}
+<table style="width:100%; table-layout: fixed; text-align: left;">
+		<thead>
+			<tr>
+				<th>Username</th>
+                <th>Birthday</th>
+                <th>Eligible</th>
+                <th>Random Number</th>
+                <th>BizzFuzz</th>
+			</tr>
+		</thead>
+		<tbody>
+{% for user in users %}
+            <tr>
+                <td>{{ user.user }}</td>
+                <td>{{ user.birthday|date:"m/d/Y" }}</td>
+                <td>{{ user.age|get_age }}</td>
+                <td>{{ user.random_number }}</td>
+				<td>{{ user.random_number|get_bizzfuzz }}</td>
+			</tr>
+{% endfor %}
+</tbody>
+</table>
