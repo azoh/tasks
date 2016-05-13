@@ -1,0 +1,5 @@
+a. git clone https://github.com/azoh/tasks.git
+b. create a virtualenv
+c. pip install requirements.txt
+d. python manage.py migrate
+e. python manage.py runserver
